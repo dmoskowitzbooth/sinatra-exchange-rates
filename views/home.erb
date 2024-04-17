@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Target: Exchange Rates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="chrome-extension://nngceckbapebfimnlniiiahkandclblb/content/fido2/page-script.js" id="bw-fido2-page-script"></script></head>
+<body>
+<h1>Currency pairs</h1>
+
+<ul>
+<% @curr_results.each do |a_curr|%>
+  <li>Convert 1 <%= a_curr%> to</li>
+<% end %>
+</ul>
+<body>
+</html>
