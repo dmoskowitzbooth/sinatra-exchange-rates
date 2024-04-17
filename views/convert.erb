@@ -1,3 +1,8 @@
 <h1>
-Currency convert <%= @a_curr %>
+Convert <%= @cfrom %>
 </h1>
+<ul>
+<% @curr_results.each do |a_curr|%>
+  <a href="/<%= @cfrom %>/<%= cfrom%>"><li>Convert 1 <%= @cfrom %> to <%= a_curr%></li></a>
+<% end %>
+</ul>
