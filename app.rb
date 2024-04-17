@@ -13,3 +13,8 @@ get("/") do
 
   erb(:home)
 end
+
+get("/:a_curr") do
+  @cfrom=params.fetch("a_curr").to_s
+ erb(:convert)
+end

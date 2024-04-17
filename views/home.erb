@@ -3,6 +3,6 @@ Currency pairs
 </h1>
 <ul>
 <% @curr_results.each do |a_curr|%>
-  <li>Convert 1 <%= a_curr%> to...</li>
+  <a href="/<%= a_curr%>"><li>Convert 1 <%= a_curr%> to...</li></a>
 <% end %>
 </ul>
