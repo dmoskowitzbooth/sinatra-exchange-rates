@@ -26,8 +26,9 @@ get("/:a_curr") do
  erb(:convert)
 end
 
-get("/:a_curr/:cfrom") do
-  @cfrom=params.fetch("a_curr").to_s
+get("/:cfrom/:cto") do
+  @cfrom=params.fetch("cfrom").to_s
+  @cto=params.fetch("cto").to_s
 
   curr_key=ENV["EXCHANGE_RATE_KEY"]
   curr_list="https://api.exchangerate.host/list?access_key=#{curr_key}"
@@ -35,5 +36,5 @@ get("/:a_curr/:cfrom") do
   curr_parsed=JSON.parse(curr)
   @curr_results=curr_parsed["currencies"].keys
   
- erb(:convert)
+ erb(:result)
 end
